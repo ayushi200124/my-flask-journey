@@ -56,7 +56,33 @@ We will add bootstrap to make work easy.
 - `<div class="container">` alligns the content of container at center according to the display and `<div class="container-fluid">` alligns with the entire screen display (these all are classes of bootstrap. 
 - Copy-paste form and table codes respectively and paste under container classes(index.html) and save. 
 - `<div class="container my-3">` add space along Y-Axis and `<div class="container mx-3">` add space along X-Axis. Add `<h2>Your To-Do</h2>` under container class. Change the names and neccessary tags in div tag of forms. 
-- Time to work with databases. `pip install flask-sqlalchemy` to install sql-alchemy through terminal. 
-    - In app.py write `from flask_sqlalchemy import SQLAlchemy`
-    - Add minimal code template from [here](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
-    - 
+Time to work with databases. `pip install flask-sqlalchemy` to install sql-alchemy through terminal. In app.py write `from flask_sqlalchemy import SQLAlchemy`. Add minimal code template from [here](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
+```
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tmp/todo.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+```
+- Important step: go to python interpretor and type these 3command: `from app import db` , `db.create_all()` , `exit()` to create the database. 
+- Now I used **Jinja templating** to pass those variables and display it in our index.html page. Type jfor, and you shall get the for loop's template if you have the jinja2 snippet kit extension in yor VS Code and the write the following jinja code
+```
+ {% for todo in allTodo %}
+               <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{todo.job}}</td>
+                <td>{{todo.status}}</td>
+                <td>{{todo.desc}}</td>
+```
+- We use requests to communicate between the front-end and the back-end in order to show the table inputs in out to-do table. 
+- Add buttons using bootstrap classes. 
