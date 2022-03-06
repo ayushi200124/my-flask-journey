@@ -75,14 +75,37 @@ class User(db.Model):
         return '<User %r>' % self.username
 ```
 - Important step: go to python interpretor and type these 3command: `from app import db` , `db.create_all()` , `exit()` to create the database. 
-- Now I used **Jinja templating** to pass those variables and display it in our index.html page. Type jfor, and you shall get the for loop's template if you have the jinja2 snippet kit extension in yor VS Code and the write the following jinja code
+- Now I used **Jinja templating** to pass those variables and display it in our index.html page. Type jfor, and you shall get the for loop's template if you have the jinja2 snippet kit extension in yor VS Code and then write the following jinja code. Here if no records are present we will show the same.
 ```
- {% for todo in allTodo %}
+ {% if allTodo|length==0 %}
+           NO Records!
+            {% else %}
+             <table class="table">
+                <thead>
+                             <tr>
+                                <th scope="col">SNo.</th>
+                                <th scope="col">To-Do Job</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                </thead>
+              <tbody>
+               {% for todo in allTodo %}
                <tr>
                 <th scope="row">{{loop.index}}</th>
                 <td>{{todo.job}}</td>
                 <td>{{todo.status}}</td>
                 <td>{{todo.desc}}</td>
+                <td>
+                    <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</a>
+                    <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+           </table>    
+               {% endfor %}
+               {% endif %}
 ```
-- We use requests to communicate between the front-end and the back-end in order to show the table inputs in out to-do table. 
-- Add buttons using bootstrap classes. 
+- We use requests to communicate between the front-end and the back-end in order to show the table inputs in to-do table. 
+- Add buttons(Update, Delete using bootstrap classes. 
