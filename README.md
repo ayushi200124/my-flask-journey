@@ -110,3 +110,9 @@ class User(db.Model):
 ```
 - We use requests to communicate between the front-end and the back-end in order to show the table inputs in to-do table. 
 - Add buttons(Update, Delete using bootstrap classes. 
+
+
+
+
+
+![project-image](https://user-images.githubusercontent.com/79920441/156931573-01e2e36e-8ad7-4aaf-ba98-ec21ea60c784.png)
