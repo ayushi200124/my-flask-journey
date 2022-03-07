@@ -1,4 +1,7 @@
 # How I learned flask <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/happy.gif" width="30" height="30" />
+Here I will be documenting my entire day-1 journey of whatever I did to learn Flask. This is written by me purely for any future references and also to keep a track of important steps which might help me when I get stuck. This is not a tutorial from my end and I am open to any suggestions from my peers.
+
+**Note:** This writing might help you only if you are a complete beginner. 
 ### See the web-app here -> [To-Do App](https://todo-ayushi.herokuapp.com/)
 #### Contents
 1. [Pre-Requisite](#pre)
@@ -14,13 +17,13 @@
 
 <a name="pre"></a>
 ## Pre-Requisite
-In this repository I will be decumenting my entire journey of whatever I did during my learning phase in Flask. This is purely written by me for any future references and also to keep a track of important steps. 
-To start learning flask we will need to have 
+Whenever I start learning anything new, I tend to go with a project based learning. Here I will be making a To-Do Web App which will perform all the basic CRUD Operations and I will later deploy it on Heroku. To begin with, I have two tools installed in my local system:
 1. VS Code
-2. Anaconda 
+2. Anaconda (Using Conda Python helps me with my ML Projects)
 <a name="env"></a>
 ## Environment set-up
-I will create a seperate conda virtual environment to work in isolated environment inside the python in anaconda
+I will create a seperate conda virtual environment to work in isolated environment with python (anaconda) and not mess with the base environment. 
+- Go to the VS Code terminal and create a new folder to work with
 - Activate conda environment `conda activate base`
 - Create a new virtual environment `conda create --name demo-flask `
 - Get the list of all of them `conda env list`
@@ -48,6 +51,8 @@ def about_me():
 ```
 <a name="dir"></a>
 ## Directory Structure
+![WhatsApp Image 2022-03-07 at 9 55 14 AM](https://user-images.githubusercontent.com/79920441/156968060-7bb066f8-8918-4ccc-8823-512bf0d86b43.jpeg)
+
 Next we create two folders right in the root directory along side the app.py and name them, **static** and **templates**. Inside templates create a file named **index.html**
 We get out emmet boilerplate by writing "!+ emmet abbreviation"
 
