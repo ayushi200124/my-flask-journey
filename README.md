@@ -13,11 +13,13 @@
 10. 
 
 <a name="pre"></a>
+## Pre-Requisite
 In this repository I will be decumenting my entire journey of whatever I did during my learning phase in Flask. This is purely written by me for any future references and also to keep a track of important steps. 
 To start learning flask we will need to have 
 1. VS Code
 2. Anaconda 
 <a name="env"></a>
+## Environment set-up
 I will create a seperate conda virtual environment to work in isolated environment inside the python in anaconda
 - Activate conda environment `conda activate base`
 - Create a new virtual environment `conda create --name demo-flask `
@@ -27,6 +29,7 @@ I will create a seperate conda virtual environment to work in isolated environme
 - To verify that the environment was removed `conda info --envs`
 - To install flask `conda install flask`
 <a name="app"></a>
+## Initializing Flask App
 Now, I created a new file named **app.py** and write the block of code:
 ```
 from flask import Flask
@@ -44,6 +47,7 @@ def about_me():
     return "<p>Hello,I am Ayushi!</p>"
 ```
 <a name="dir"></a>
+## Directory Structure
 Next we create two folders right in the root directory along side the app.py and name them, **static** and **templates**. Inside templates create a file named **index.html**
 We get out emmet boilerplate by writing "!+ emmet abbreviation"
 
@@ -71,6 +75,7 @@ We will add bootstrap to make work easy.
 - Copy-paste form and table codes respectively and paste under container classes(index.html) and save. 
 - `<div class="container my-3">` add space along Y-Axis and `<div class="container mx-3">` add space along X-Axis. Add `<h2>Your To-Do</h2>` under container class. Change the names and neccessary tags in div tag of forms. 
 <a name="data"></a>
+## Working With Databases
 Time to work with databases. `pip install flask-sqlalchemy` to install sql-alchemy through terminal. In app.py write `from flask_sqlalchemy import SQLAlchemy`. Add minimal code template from [here](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
 ```
 from flask import Flask
@@ -125,9 +130,13 @@ class User(db.Model):
 - We use requests to communicate between the front-end and the back-end in order to show the table inputs in to-do table. 
 - Add buttons(Update, Delete using bootstrap classes. 
 <a name="crud"></a>
+## CRUD Operations
 <a name="temp"></a>
+## Template Inheritance
 <a name="dep"></a>
+## Deploying On Heroku
 <a name="git"></a>
+## Updating Github Repository
 
 
 
