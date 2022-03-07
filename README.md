@@ -1,11 +1,23 @@
 # How I learned flask <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/happy.gif" width="30" height="30" />
 ### See the web-app here -> [To-Do App](https://todo-ayushi.herokuapp.com/)
+#### Contents
+1. [Pre-Requisite](#pre)
+2. [Environment set-up](#env)
+3. [Initializing Flask App](#app)
+4. [Directory Structure](#dir)
+5. [Working With Databases](#data)
+6. [CRUD Operations](#crud)
+7. [Template Inheritance](#temp)
+8. [Deploying On Heroku](#dep)
+9. [Updating Github Repository](#git)
+10. 
 
+<a name="pre"></a>
 In this repository I will be decumenting my entire journey of whatever I did during my learning phase in Flask. This is purely written by me for any future references and also to keep a track of important steps. 
 To start learning flask we will need to have 
 1. VS Code
 2. Anaconda 
-
+<a name="env"></a>
 I will create a seperate conda virtual environment to work in isolated environment inside the python in anaconda
 - Activate conda environment `conda activate base`
 - Create a new virtual environment `conda create --name demo-flask `
@@ -14,7 +26,7 @@ I will create a seperate conda virtual environment to work in isolated environme
 - In case you want to delete the environment `conda env remove --name demo-flask`
 - To verify that the environment was removed `conda info --envs`
 - To install flask `conda install flask`
-
+<a name="app"></a>
 Now, I created a new file named **app.py** and write the block of code:
 ```
 from flask import Flask
@@ -31,6 +43,7 @@ In the terminal run `python .\app.py` to run flask. To add multiple end-points f
 def about_me():
     return "<p>Hello,I am Ayushi!</p>"
 ```
+<a name="dir"></a>
 Next we create two folders right in the root directory along side the app.py and name them, **static** and **templates**. Inside templates create a file named **index.html**
 We get out emmet boilerplate by writing "!+ emmet abbreviation"
 
@@ -57,6 +70,7 @@ We will add bootstrap to make work easy.
 - `<div class="container">` alligns the content of container at center according to the display and `<div class="container-fluid">` alligns with the entire screen display (these all are classes of bootstrap. 
 - Copy-paste form and table codes respectively and paste under container classes(index.html) and save. 
 - `<div class="container my-3">` add space along Y-Axis and `<div class="container mx-3">` add space along X-Axis. Add `<h2>Your To-Do</h2>` under container class. Change the names and neccessary tags in div tag of forms. 
+<a name="data"></a>
 Time to work with databases. `pip install flask-sqlalchemy` to install sql-alchemy through terminal. In app.py write `from flask_sqlalchemy import SQLAlchemy`. Add minimal code template from [here](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
 ```
 from flask import Flask
@@ -110,7 +124,10 @@ class User(db.Model):
 ```
 - We use requests to communicate between the front-end and the back-end in order to show the table inputs in to-do table. 
 - Add buttons(Update, Delete using bootstrap classes. 
-
+<a name="crud"></a>
+<a name="temp"></a>
+<a name="dep"></a>
+<a name="git"></a>
 
 
 
