@@ -1,5 +1,5 @@
 # How I learned flask <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/happy.gif" width="30" height="30" />
-Here I will be documenting my entire day-1 journey of whatever I did to learn Flask. This is written by me purely for any future references and also to keep a track of important steps which might help me when I get stuck. This is not a tutorial from my end and I am open to any suggestions from my peers.
+Here I will be documenting my entire day-1 lesson of whatever I did to learn Flask. This is written by me purely for any future references and also to keep a track of important steps which might help me when I get stuck. This is not a tutorial from my end and I am open to any suggestions from my peers.
 
 **Note:** This writing might help you only if you are a complete beginner. 
 ### See the web-app here -> [To-Do App](https://todo-ayushi.herokuapp.com/)
@@ -13,11 +13,10 @@ Here I will be documenting my entire day-1 journey of whatever I did to learn Fl
 7. [Template Inheritance](#temp)
 8. [Deploying On Heroku](#dep)
 9. [Updating Github Repository](#git)
-10. 
 
 <a name="pre"></a>
 ## Pre-Requisite
-Whenever I start learning anything new, I tend to go with a project based learning. Here I will be making a To-Do Web App which will perform all the basic CRUD Operations and I will later deploy it on Heroku. To begin with, I have two tools installed in my local system:
+Whenever I start learning anything new, I tend to go with a project based learning. Hence, I will be making a To-Do Web App which will perform all the basic CRUD Operations and I will later deploy it on Heroku. To begin with, I have two tools installed in my local system:
 1. VS Code
 2. Anaconda (Using Conda Python helps me with my ML Projects)
 <a name="env"></a>
@@ -33,7 +32,7 @@ I will create a seperate conda virtual environment to work in isolated environme
 - To install flask `conda install flask`
 <a name="app"></a>
 ## Initializing Flask App
-Now, I created a new file named **app.py** and write the block of code:
+Now, I created a new file named **app.py** and copied the block of code:
 ```
 from flask import Flask
 app = Flask(__name__)
